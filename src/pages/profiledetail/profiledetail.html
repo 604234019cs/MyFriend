@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Book Detail</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-grid style="height: 100%" >
+        <ion-row justify-content-center align-items-center style="height: 100%" *ngIf="Profile">
+  
+              <img  height="200px" src="{{Profile.picture }}" />
+      
+              <ion-list >
+                  <ion-item>                
+                      <strong> studentid:</strong> {{ Profile.studentid }}             
+                  </ion-item>
+                  <ion-item>                
+                      <strong> firstname:</strong> {{ Profile.firstname }}             
+                  </ion-item>
+                <ion-item>                
+                    <strong>lastname:</strong>  {{ Profile.lastname }} 
+                </ion-item>
+
+                <ion-item>                
+                    <strong>nickname</strong>    {{ Profile.nickname }}           
+                  </ion-item>
+
+                  <ion-item>                
+                      <strong>BirthDate:</strong>  {{ Profile.BirthDate|date:'dd/MM/yyyy' }}   
+                  </ion-item>
+                        
+              </ion-list>
+              
+              <button ion-button full (click)="goBack()" >
+                Back
+              </button>
+</ion-row>
+</ion-grid>
+</ion-content>
